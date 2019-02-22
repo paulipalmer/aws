@@ -1,6 +1,6 @@
 # aws
 ## awscli
-Support for AWS using the command line interface. 
+Support for AWS using the command line interface 
 
 Before using:
 - Ensure that awscli is installed locally
