@@ -9,7 +9,7 @@ Before using:
 
 -MRM
 
-# Additional met data
+## Additional met data
 Met data presentaly unavailable from s3://gcgrid/ can be first downloaded into local directories by using wget on local servers (e.g. holmes) and then uploaded to our shared bucket (i.e. s3://paulpalmerlab-geoschem/). Contact Maggie for reading and writing permissions. Please keep the same directory structure as s3://gcgrid/.
 
 -Fei
