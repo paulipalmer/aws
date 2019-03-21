@@ -67,9 +67,13 @@ for varname, dr in ds.data_vars.items():
         result_list.append(dr_temp)
     else:
         dr_temp = regridder_conserve(dr) # temporary variable for the current tracer
+        dr_temp.attrs = dr.attrs
         result_list.append(dr_temp)  # add the current result to the list
 
 ds_result = xr.merge(result_list)  # merge a list of DataArray to a single Dataset
+ds_result['lon'].attrs = ds['lon'].attrs
+ds_result['lat'].attrs = ds['lat'].attrs
+
 ds_result.to_netcdf(outfilename)
 
 # Clean-up: remove the regridder "cache" if you don't need it next time
